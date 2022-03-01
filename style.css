@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: hsl(229, 57%, 11%) url("./images/bg-desktop.png") no-repeat top
+    50vh left 0vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flyo {
+  width: 80rem;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 2rem;
+  align-items: end;
+}
+
+.flyo__left,
+.flyo__right {
+  background-color: hsl(228, 56%, 26%);
+}
+
+.flyo__left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+  border-radius: 1.2rem;
+  border-top-right-radius: 9rem;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.icon {
+  background-color: hsl(229, 57%, 11%);
+  padding: 1rem;
+  border-radius: 0.9rem;
+}
+
+.flyo__right {
+  padding: 3rem;
+  border-radius: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.remaining-storage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 15rem;
+  padding: 1rem 1.5rem;
+  font-size: 2.8rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(229, 57%, 11%);
+  position: absolute;
+  top: -20%;
+  right: 6%;
+}
+
+.remaining-storage::after {
+  content: "";
+  position: absolute;
+  top: 85%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 2.4rem solid hsl(0, 0%, 100%);
+  border-left: 2.4rem solid transparent;
+}
+
+.left {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: hsl(229, 7%, 55%);
+}
+
+.progress {
+  width: 100%;
+  background-color: hsla(229, 57%, 11%, 0.801);
+  border-radius: 1.3rem;
+  padding: 0.2rem;
+  margin: 1.2rem 0 0.8rem 0;
+}
+
+.progress-bar {
+  height: 1.2rem;
+  width: 70%;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 1.3rem;
+}
+
+.use-storage {
+  color: hsla(243, 100%, 93%, 0.6);
+  font-size: 1.4rem;
+}
+
+.GB-storage {
+  color: hsl(243, 100%, 93%);
+}
+
+.storages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storage {
+  color: hsl(243, 100%, 93%);
+}
+
+.GB-storage,
+.storage {
+  font-weight: 700;
+}
+
+/* Media Queries */
+@media (max-width: 23.4em) {
+  .flyo {
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flyo__left,
+  .flyo__right {
+    align-self: stretch;
+    margin: 0 2rem;
+  }
+
+  .remaining-storage {
+    padding: 0.5rem 1.2rem;
+    top: 50%;
+    bottom: -25%;
+    transform: translate(-50%, 25%);
+  }
+
+  .remaining-storage::after {
+    visibility: hidden;
+  }
+}
